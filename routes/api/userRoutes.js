@@ -1,8 +1,8 @@
 // Importing the Express router
 const router = require("express").Router();
 
-// Importing the User Controller, which contains the methods for each of the routes
-const userController = require("../controllers/userController");
+//import user controller
+const userController = require('../../controllers/userController.js');
 
 // Route that matches "/users"
 router

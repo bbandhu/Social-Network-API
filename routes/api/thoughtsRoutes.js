@@ -2,7 +2,7 @@
 const router = require("express").Router();
 
 // Importing the Thought Controller, which includes the methods for each of the routes
-const thoughtController = require("../controllers/thoughtController");
+const thoughtController =require('../../controllers/thoughtsController.js');
 
 // Defining a route that matches "/thoughts"
 router
