@@ -1,6 +1,7 @@
 const connection = require('../config/connection'); 
-const { User } = require('../models/User');
-const { Thought } = require('../models/Thought');
+const User = require('../models/User');
+const Thought = require('../models/Thought');
+console.log(User);
 const { userSeed } = require('./user-seed');
 const { thoughtSeed } = require('./thought-seed');
 
