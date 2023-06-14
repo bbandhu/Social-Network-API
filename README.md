@@ -30,7 +30,7 @@ The Social Network API is a powerful tool for building social networking applica
 - [License](#license)
 - [Contributors](#contributors)
 - [Features](#features)
-- [Technogies](#technologies Used)
+- [TechnogiesUsed](#TechnologiesUsed)
 
 ## Installation
 
@@ -77,6 +77,6 @@ Mongoose
 * DELETE /api/thoughts/:thoughtId/reactions/:reactionId to remove a reaction 
 
 Screenshots
-![https://github.com/bbandhu/Social-Network-API/blob/main/assests/Screenshot1.png]
-![https://github.com/bbandhu/Social-Network-API/blob/main/assests/Screenshot2.png]
-![https://github.com/bbandhu/Social-Network-API/blob/main/assests/Screenshot3.png]
+![Image](https://github.com/bbandhu/Social-Network-API/blob/main/assests/Screenshot1.png)
+![Image](https://github.com/bbandhu/Social-Network-API/blob/main/assests/Screenshot2.png)
+![Image](https://github.com/bbandhu/Social-Network-API/blob/main/assests/Screenshot3.png)
