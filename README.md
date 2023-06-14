@@ -23,8 +23,6 @@ The API utilizes Express.js as the web framework for handling HTTP requests, Mon
 
 The Social Network API is a powerful tool for building social networking applications, enabling developers to focus on the frontend and user experience while leveraging the robust backend functionality provided by the API.
 
-Feel free to customize this description to match the specific features and functionality of your Social Network API project.
-
 ## Table of Contents
 
 - [Installation](#installation)
@@ -63,24 +61,22 @@ Mongoose
 ## Features
 
  API Routes
+* getAllUsers: Retrieves all users
+* createUser: Creates a new user
+* getUserById: Retrieves a user by their ID
+* updateUser: Updates a user by their ID
+* deleteUser: Deletes a user by their ID
+* addFriend: Adds a friend to a user's friends list
+* getUserFriends: Retrieves a user's friends
+* GET /api/thoughts to get all thoughts.
+* POST /api/thoughts to create a new thought.
+* GET /api/thoughts/:id to get a thought by its id.
+* PUT /api/thoughts/:id to update a thought by its id.
+* DELETE /api/thoughts/:id to delete a thought by its id.
+* POST /api/thoughts/:thoughtId/reactions to add a reaction to a specific thought.
+* DELETE /api/thoughts/:thoughtId/reactions/:reactionId to remove a reaction 
 
-/users
-GET: Get all users.
-POST: Create a new user.
-PUT: Update a user.
-DELETE: Delete a user.
-/users/:id
-GET: Get a user by ID.
-PUT: Update a user by ID.
-DELETE: Delete a user by ID.
-/thoughts
-GET: Get all thoughts.
-POST: Create a new thought.
-PUT: Update a thought.
-DELETE: Delete a thought.
-/thoughts/:id
-GET: Get a thought by ID.
-PUT: Update a thought by ID.
-DELETE: Delete a thought by ID.
-
-
+Screenshots
+![https://github.com/bbandhu/Social-Network-API/blob/main/assests/Screenshot1.png]
+![https://github.com/bbandhu/Social-Network-API/blob/main/assests/Screenshot2.png]
+![https://github.com/bbandhu/Social-Network-API/blob/main/assests/Screenshot3.png]
