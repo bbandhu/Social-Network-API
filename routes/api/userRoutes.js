@@ -5,8 +5,7 @@ const router = require("express").Router();
 const userController = require('../../controllers/userController.js');
 
 // Route that matches "/users"
-router
-  .route("/users")
+router.route("/")
   // GET request to "/users", run the `getAllUsers` method in the User Controller
   .get(userController.getAllUsers)
   // POST request to "/users", run the `createUser` method in the User Controller
@@ -14,12 +13,19 @@ router
 
 // Route that matches "/users/:id", where ":id" is a placeholder for any specific user id the client is requesting
 router
-  .route("/users/:id")
+  .route("/:id")
   //GET request to "/users/:id", run the `getUserById` method in the User Controller
   .get(userController.getUserById)
   // PUT request to "/users/:id", run the `updateUser` method in the User Controller
   .put(userController.updateUser)
   //  DELETE request to "/users/:id", run the `deleteUser` method in the User Controller
   .delete(userController.deleteUser);
+
+  //add /create a friend 
+  router.route('/:userId/friends/:friendId').post(userController.addFriend);
+  //get freinds 
+  router.route('/:userId/friends').get(userController.getUserFriends);
+  
+
 
 module.exports = router;

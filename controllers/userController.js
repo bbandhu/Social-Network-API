@@ -59,6 +59,48 @@ const userController = {
       return res.status(500).json({ error: error.message });
     }
   },
+
+
+  // Add a friend
+   addFriend: async (req, res) => {
+    try {
+        const user = await User.findByIdAndUpdate(
+          req.params.userId,
+          { $push: { friends: req.params.friendId } },
+          { new: true }
+        );
+    
+        if (!user) {
+          return res.status(404).json({ message: 'No user with this id' });
+        }
+    
+        res.json(user);
+      } catch (err) {
+        console.error(err);  // Log the error
+        res.status(500).json(err);
+      }
+  },
+  
+  // Get a user's friends
+getUserFriends: async (req, res) => {
+    try {
+      const user = await User.findById(req.params.userId).populate('friends');
+      if (!user) {
+        return res.status(404).json({ message: 'No user found with this id!' });
+      }
+      if (user.friends.length === 0) {
+        return res.status(200).json({ message: 'This user has no friends added.' });
+      }
+      return res.json(user.friends);
+    } catch (error) {
+      return res.status(500).json({ error: error.message });
+    }
+  },
+
+
+
 };
+
+
 
 module.exports = userController;
