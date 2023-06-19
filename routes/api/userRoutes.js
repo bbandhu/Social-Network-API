@@ -25,7 +25,8 @@ router
   router.route('/:userId/friends/:friendId').post(userController.addFriend);
   //get freinds 
   router.route('/:userId/friends').get(userController.getUserFriends);
-  
+  //delete friend
+  router.route('/:userId/friends/:friendId').delete(userController.deleteFriend);
 
 
 module.exports = router;

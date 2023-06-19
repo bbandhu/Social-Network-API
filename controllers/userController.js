@@ -97,6 +97,25 @@ getUserFriends: async (req, res) => {
     }
   },
 
+  
+  // Delete a friend
+  deleteFriend: async (req, res) => {
+    try {
+      const user = await User.findByIdAndDelete(
+        req.params.userId,
+        { $pull: { friends: req.params.friendId } },
+        { new: true }
+      );
+      if (!user) {
+        return res.status(404).json({ message: 'No user found with this id!' });
+      }
+      return res.json({ message: 'Successfully deleted the friend.' });
+    } catch (error) {
+      return res.status(500).json({ error: error.message });
+    }
+  }
+
+
 
 
 };
